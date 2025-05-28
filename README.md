@@ -8,13 +8,54 @@ This proof-of-concept demonstrates a lightweight detection layer for multi-agent
 Built using LangGraph and AutoGen, the PoC simulates real-world orchestration and introduces a middleware layer (locally and in AWS Lambda) to verify every tool invocation using scoped JWTs and behavior validation. 
 
 ## Project Structure 
+<code> 
+├── main.py               # Runs LangGraph-based multi-agent orchestration
+├── middleware.py         # Verifies token scope, intent, and replay violations
+├── dashboard.py          # Streamlit dashboard showing real-time detection logs
+├── simulator.py          # Spawns malicious agents simulating attack scenarios
+├── autogen_sim.py        # AutoGen orchestration with detection middleware
+├── utils/
+│   ├── token_utils.py    # JWT generation and decoding helpers
+│   ├── logger.py         # Streaming log system used by dashboard
+└── README.md
+</code>
 
-|-- main.py # Runs LangGraph base multi agent orchestration 
-|-- middleware.py # verifies token scope, intent and replay violation 
-|-- dashboard.py #Streamlit dashboard showing realtime detection logs 
-|-- simulator.py #Malicious agent stimulating attack scenarios 
-|-- autogen_sim.py #AutoGen orchestration layer with detection middleware 
-|--utils/
-    |--token_utils.py #JWT generation and decoding helper 
-    |-- logger.py #Streming logger consumed by the dashboard 
-|README.md 
+## Getting Started
+
+* Clone the repository
+  
+<code>git clone https://github.com/YOUR_HANDLE/secure-multi-agent-poc.git
+ cd secure-multi-agent-poc</code>
+
+* Set up the virtual environment
+
+<code>python -m venv venv
+source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+pip install -r requirements.txt</code>
+
+* Run the main LangGraph PoC
+
+<code> python main.py </code> 
+
+* Launch the real-time detection dashboard
+
+<code> streamlit run dashboard.py</code> 
+
+* Simulate malicious agents
+
+<code> python simulator.py </code> 
+
+* (Another Orch Layer) Run AutoGen PoC
+
+<code> python autogen_sim.py</code> 
+
+## How it works 
+
+Each agent in the system receives a scoped token tied to its ID, permitted tool(s), and intended task. The middleware intercepts every tool call and validates:
+* The agent’s identity and scope
+* The tool being used
+* Whether the intent matches the assigned task
+* Whether the token has been reused
+
+Violations are logged in real-time — visible on the dashboard.py.
+

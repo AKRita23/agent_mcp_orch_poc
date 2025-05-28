@@ -1,0 +1,58 @@
+[
+  {
+    "timestamp": 1748452635.6242461,
+    "agent_id": "agent-planner-001",
+    "tool_call": "call.summarizer",
+    "intent": "summarize",
+    "category": "replay",
+    "score": 3
+  },
+  {
+    "timestamp": 1748452635.6254342,
+    "agent_id": "agent-planner-001",
+    "tool_call": "call.summarizer",
+    "intent": "summarize",
+    "category": "replay",
+    "score": 3
+  },
+  {
+    "timestamp": 1748452635.626723,
+    "agent_id": "agent-planner-001",
+    "tool_call": "call.summarizer",
+    "intent": "summarize",
+    "category": "replay",
+    "score": 3
+  },
+  {
+    "timestamp": 1748452635.627867,
+    "agent_id": "agent-planner-001",
+    "tool_call": "call.summarizer",
+    "intent": "summarize",
+    "category": "replay",
+    "score": 3
+  },
+  {
+    "timestamp": 1748452635.628999,
+    "agent_id": "agent-planner-001",
+    "tool_call": "call.summarizer",
+    "intent": "summarize",
+    "category": "replay",
+    "score": 3
+  },
+  {
+    "timestamp": 1748452635.630143,
+    "agent_id": "agent-planner-001",
+    "tool_call": "call.summarizer",
+    "intent": "summarize",
+    "category": "replay",
+    "score": 3
+  },
+  {
+    "timestamp": 1748452635.631238,
+    "agent_id": "agent-planner-001",
+    "tool_call": "call.summarizer",
+    "intent": "summarize",
+    "category": "replay",
+    "score": 3
+  }
+]

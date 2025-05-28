@@ -12,11 +12,9 @@ Built using LangGraph and AutoGen, the PoC simulates real-world orchestration an
 ├── main.py               # Runs LangGraph-based multi-agent orchestration
 ├── middleware.py         # Verifies token scope, intent, and replay violations
 ├── dashboard.py          # Streamlit dashboard showing real-time detection logs
-├── simulator.py          # Spawns malicious agents simulating attack scenarios
-├── autogen_sim.py        # AutoGen orchestration with detection middleware
-├── utils/
-│   ├── token_utils.py    # JWT generation and decoding helpers
-│   ├── logger.py         # Streaming log system used by dashboard
+├── malicious_agent.py    # malicious agent simulating attack scenarios
+├── autogen_flow.py       # AutoGen orchestration with detection middleware
+├── issuer.py             # JWT generation and decoding helpers
 └── README.md
 </code>
 

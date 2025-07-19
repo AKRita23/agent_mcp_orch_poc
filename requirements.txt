@@ -3,4 +3,4 @@ langchain
 flask
 pyjwt
 streamlit
-pyautogen
+ag2
